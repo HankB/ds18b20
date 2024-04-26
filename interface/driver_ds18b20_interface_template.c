@@ -1,6 +1,6 @@
 /**
  * Copyright (c) 2015 - present LibDriver All rights reserved
- * 
+ *
  * The MIT License (MIT)
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -19,7 +19,7 @@
  * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- * SOFTWARE. 
+ * SOFTWARE.
  *
  * @file      driver_ds18b20_interface_template.c
  * @brief     driver ds18b20 interface template source file
@@ -34,8 +34,10 @@
  * <tr><td>2020/12/20  <td>1.0      <td>Shifeng Li  <td>first upload
  * </table>
  */
-  
+
 #include "driver_ds18b20_interface.h"
+#include <stdarg.h>
+
 
 /**
  * @brief  interface bus init
@@ -71,6 +73,7 @@ uint8_t ds18b20_interface_deinit(void)
  */
 uint8_t ds18b20_interface_read(uint8_t *value)
 {
+    ds18b20_interface_debug_print("ds18b20_interface_read()\n");
     return 0;
 }
 
@@ -84,6 +87,7 @@ uint8_t ds18b20_interface_read(uint8_t *value)
  */
 uint8_t ds18b20_interface_write(uint8_t value)
 {
+    ds18b20_interface_debug_print("ds18b20_interface_write()\n");
     return 0;
 }
 
@@ -94,7 +98,7 @@ uint8_t ds18b20_interface_write(uint8_t value)
  */
 void ds18b20_interface_delay_ms(uint32_t ms)
 {
-    
+    ds18b20_interface_debug_print("ds18b20_interface_delay_ms()\n");
 }
 
 /**
@@ -104,7 +108,7 @@ void ds18b20_interface_delay_ms(uint32_t ms)
  */
 void ds18b20_interface_delay_us(uint32_t us)
 {
-    
+    ds18b20_interface_debug_print("ds18b20_interface_delay_us()\n");
 }
 
 /**
@@ -113,7 +117,7 @@ void ds18b20_interface_delay_us(uint32_t us)
  */
 void ds18b20_interface_enable_irq(void)
 {
-    
+    ds18b20_interface_debug_print("ds18b20_interface_enable_irq()\n");
 }
 
 /**
@@ -122,7 +126,7 @@ void ds18b20_interface_enable_irq(void)
  */
 void ds18b20_interface_disable_irq(void)
 {
-    
+    ds18b20_interface_debug_print("ds18b20_interface_disable_irq()\n");
 }
 
 /**
@@ -132,5 +136,7 @@ void ds18b20_interface_disable_irq(void)
  */
 void ds18b20_interface_debug_print(const char *const fmt, ...)
 {
-    
+    va_list args;
+    va_start(args, fmt);
+    vprintf(fmt, args);
 }
