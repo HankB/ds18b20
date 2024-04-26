@@ -4,6 +4,8 @@
 <img src="/doc/image/logo.svg" width="400" height="150"/>
 </div>
 
+# all local updates will be performed in the `localwork` branch
+
 ## LibDriver DS18B20
 
 [![MISRA](https://img.shields.io/badge/misra-compliant-brightgreen.svg)](/misra/README.md) [![API](https://img.shields.io/badge/api-reference-blue.svg)](https://www.libdriver.com/docs/ds18b20/index.html) [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](/LICENSE)
