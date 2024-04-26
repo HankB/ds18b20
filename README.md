@@ -4,6 +4,14 @@
 <img src="/doc/image/logo.svg" width="400" height="150"/>
 </div>
 
+## Status of Raspberry Pi implermentation
+
+Builds but does not work.
+
+```text
+gcc -o basic -Wall -I ../interface -I ../src basic_main.c driver_ds18b20_basic.c ../src/driver_ds18b20.c ../interface/driver_ds18b20_interface_template.c 
+```
+
 ## LibDriver DS18B20
 
 [![MISRA](https://img.shields.io/badge/misra-compliant-brightgreen.svg)](/misra/README.md) [![API](https://img.shields.io/badge/api-reference-blue.svg)](https://www.libdriver.com/docs/ds18b20/index.html) [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](/LICENSE)
